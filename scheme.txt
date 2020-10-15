@@ -16,7 +16,7 @@ $ common_private = sha3( decapsed_private_keys_vector[i] ||  ... )
 }
 
 client x server:
-{ common_private } : AES-256 (CTR - parallel, OCB with validation)
+{ common_private } : AES-256 (CTR - parallel, OCB with validation) GCM-SIV
 
 
 encoding:
