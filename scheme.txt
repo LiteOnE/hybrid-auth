@@ -1,0 +1,19 @@
+client -> 
+{
+  public_keys_vector: [ ... , *b64encoded* ],
+  public_signature_vector: [ ... ],
+  sha3_signatures_vector: [ ... ]
+}
+
+<- server
+$ decapsed_private_keys_vector: []
+$ common_private = sha3( decapsed_private_keys_vector[i] ||  ... )
+
+{
+  public_server_keys_vector: [ ... ],
+  public_signature_vector: [ ... ],
+  sha3_signatures_vector: [ ... ]
+}
+
+client x server:
+{ common_private } : AES-256 (todo mode)
