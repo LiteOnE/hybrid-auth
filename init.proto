@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package hybrid_auth;
+
+message Init {
+  repeated string public_keys = 1;
+  
+  optional string signature = 2;
+}
