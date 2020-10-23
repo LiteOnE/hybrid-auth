@@ -25,3 +25,5 @@ use protobufs mb?
 
 replay attack fix:
 issue new seed each time and use it for symmetric encryption
+
+authentication to prevent mitm attacks
