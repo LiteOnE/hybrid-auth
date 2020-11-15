@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+enum DS {
+    RSA_2048 = 1 << 0;
+    RSA_3072 = 1 << 1;
+    RSA_4096 = 1 << 2;
+    
+    ECDSA = 1 << 3;
+    
+    DILITHIUM_1024x768 = 1 << 4;
+    DILITHIUM_1280x1024 = 1 << 5;
+    DILITHIUM_1536x1280 = 1 << 6;
+    
+    FALCON_512 = 1 << 7;
+    FALCON_1024 = 1 << 8;
+}
+
+message PublicKey {
+    enum KEM {
+        DHE = 1 << 0;
+        
+        ECDHE = 1 << 1;
+        
+        KYBER_512 = 1 << 2;
+        KYBER_768 = 1 << 3;
+        KYBER_1024 = 1 << 4;
+        
+        KYBER_512_90s = 1 << 5;
+        KYBER_768_90s = 1 << 6;
+        KYBER_1024_90s = 1 << 7;
+        
+        LightSABER = 1 << 8;
+        SABER = 1 << 9;
+        FireSABER = 1 << 10;
+    }
+}
+
+
+message Handshake {
+    uint32 version = 1;
+    
+}
