@@ -46,6 +46,6 @@ message KEM_PublicKey {
 
 message Handshake {
     uint32 version = 1;
-    repeated KEM_PublicKey keys = 2;
-    repeated DS_PublicKey keys = 3;
+    repeated KEM_PublicKey kem_keys = 2;
+    repeated DS_PublicKey ds_keys = 3;
 }
